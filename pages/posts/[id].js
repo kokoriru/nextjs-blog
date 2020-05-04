@@ -16,3 +16,11 @@ export default Post() {
     </Layout>
   )
 }
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds()
+  return {
+    paths,
+    fallback: false
+  }
+}
