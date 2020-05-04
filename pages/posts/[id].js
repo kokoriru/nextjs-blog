@@ -1,18 +1,14 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
-export default Post() {
+export default function Post({ postData }) {
   return (
     <Layout>
-      <Head>
-        <title>Post</title>
-      </Head>
-      <h1>Post</h1>
-      <h2>
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
-      </h2>
+      {postData.title}
+      <br />
+      {postData.id}
+      <br />
+      {postData.date}
     </Layout>
   )
 }
